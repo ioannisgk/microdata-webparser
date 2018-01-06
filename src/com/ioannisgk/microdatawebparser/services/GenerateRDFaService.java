@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 public class GenerateRDFaService {
 	
 	public String generate(HashMap extractedCondition1, HashMap extractedCondition2) {
+		
+		// The html code to be parsed on the generate page
+                // Here we just add the values of the microdata variables to the standard rdfa code
 		String htmlCode = 
 				"<div xmlns=\"http://www.w3.org/1999/xhtml\"\n" +
 				    "prefix=\"\n" +
