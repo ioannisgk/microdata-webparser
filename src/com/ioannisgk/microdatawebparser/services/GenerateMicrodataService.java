@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 public class GenerateMicrodataService {
 	
 	public String generate(HashMap extractedCondition1, HashMap extractedCondition2) {
+		
+		// The html code to be parsed on the generate page
+                // Here we just add the values of the microdata variables to the standard itemscope, itemtype, itemprop code
 		String htmlCode = 
 				"<div id=\"itemscope\" itemscope itemtype=\"http://schema.org/MedicalCondition\">\n" + 
 				    "<strong>Name</strong>: <span itemprop=\"name\">" + extractedCondition1.get("Name") + "</span></br></br>\n" + 
