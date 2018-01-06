@@ -10,8 +10,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class SourcesDAO {
 	
+	// Hashmap with medical conditions and their corresponding URLs of the sources
 	private HashMap<String, String[]> medicalConditions = new HashMap<String, String[]>();
 	
+	// Sources that contain the URLs of the medical conditions websites
 	String data01 = "https://blausen.com/en/video/pulmonary-embolism/";
 	String data02 = "https://coreem.net/core/hd-unstable-pe/";
 	String data03 = "https://blausen.com/en/video/asthma/";
@@ -30,6 +32,8 @@ public class SourcesDAO {
 	String data16 = "https://coreem.net/core/ectopic-pregnancy/";
 	
 	public SourcesDAO() {
+		
+		// In the constructor we associate two sources to a specific medical condition with a hashmap
 		this.medicalConditions.put("Abdominal Aneurysm", new String[]{data07, data08});
 		this.medicalConditions.put("Asthma", new String[]{data03, data04});
 		this.medicalConditions.put("Atrial Fibrillation", new String[]{data09, data10});
