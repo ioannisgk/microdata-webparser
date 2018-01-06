@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 public class GenerateJSONLDService {
 	
 	public String generate(HashMap extractedCondition1, HashMap extractedCondition2) {
+		
+		
+                // The html code to be parsed on the generate page
+                // Here we just add the values of the microdata variables to the standard jsonld code
 		String htmlCode = 
 					"{\n" +
 					  "\"@context\": {\n" +
