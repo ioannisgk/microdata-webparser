@@ -53,7 +53,7 @@ public class ParseMode2Service {
 		}
 		
 		// Update hashmaps with microdata properties and values
-		extractedCondition.put("Alternate Name", schemaKeywords.get(0));
+		extractedCondition.put("Alternate Name", (schemaKeywords.isEmpty()) ? "" : schemaKeywords.get(0));
 		extractedCondition.put("Keywords", (keywords.isEmpty()) ? keywords : keywords.substring(1));
 		extractedCondition.put("Pathophysiology", (pathophysiology.isEmpty()) ? pathophysiology : pathophysiology.substring(1));		
 		extractedCondition.put("Treatment", (treatment.isEmpty()) ? treatment : treatment.substring(1));

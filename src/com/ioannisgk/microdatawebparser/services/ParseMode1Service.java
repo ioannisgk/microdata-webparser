@@ -51,7 +51,7 @@ public class ParseMode1Service {
 		}
 		
 		// Update hashmaps with microdata properties and values
-		extractedCondition.put("Name", schemaKeywords.get(0));
+		extractedCondition.put("Name", (schemaKeywords.isEmpty()) ? "" : schemaKeywords.get(0));
 		extractedCondition.put("Keywords", (keywords.isEmpty()) ? keywords : keywords.substring(1));
 		extractedCondition.put("Description", (description.isEmpty()) ? description : description.substring(1));
 		return extractedCondition;
